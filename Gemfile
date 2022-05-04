@@ -11,6 +11,9 @@ gem "decidim", "0.26.1"
 # gem "decidim-initiatives", "0.26.1"
 # gem "decidim-templates", "0.26.1"
 
+gem "decidim-decidim_awesome"
+gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: :develop
+
 gem "bootsnap", "~> 1.3"
 
 gem "puma", ">= 5.0.0"
