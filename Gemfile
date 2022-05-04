@@ -32,4 +32,18 @@ group :development do
   gem "spring", "~> 2.0"
   gem "spring-watcher-listen", "~> 2.0"
   gem "web-console", "~> 4.0"
+  gem "capistrano", "~> 3.15"
+  gem "capistrano-bundler"
+  gem "capistrano-passenger"
+  gem "capistrano-rails"
+  gem "capistrano-rails-console"
+  gem "capistrano-rbenv"
+  gem "capistrano-sidekiq"
+end
+
+group :production do
+  gem "figaro"
+  gem "passenger"
+  gem "sidekiq"
+  gem "sidekiq-cron"
 end
