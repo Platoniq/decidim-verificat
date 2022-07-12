@@ -1,11 +1,11 @@
 @import "./variables";
 
 .title-bar {
-  background-color: $color-white;
+  background-color: $white;
 }
 
 .navbar {
-  background-color: $color-white;
+  background-color: $white;
 
   border-top: 2px solid $primary-color;
 
@@ -16,7 +16,8 @@
   }
 
   .main-nav__link--active a {
-    box-shadow: inset 0 8px 0 0 $primary-color;
+    box-shadow: none;
+    background: $background-gradient;
     color: $body-font-color;
     font-weight: 700;
   }
@@ -42,7 +43,7 @@
     max-width: inherit;
 
     input {
-      background: $color-white;
+      background: $white;
       box-shadow: none;
       margin-top: 8px;
       display: inline-block;
@@ -67,7 +68,7 @@
       .button {
         border: none;
         height: 2.5rem;
-        background: $color-white;
+        background: $white;
         transition: none;
         box-shadow: none;
 
@@ -148,7 +149,7 @@
       margin-right: 0;
       margin-left: 0;
       background-color: $primary-color;
-      color: $color-white;
+      color: $white;
       margin: $button-margin;
       padding: $button-padding;
       border: $button-border;
