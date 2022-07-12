@@ -163,3 +163,15 @@ $button-background-hover-lightness: 0%;
 $button-hollow-hover-lightness: 0%;
 $button-transition: none;
 $button-responsive-expanded: false;
+
+// 14. Card
+// --------
+
+$card-background: $white;
+$card-font-color: $body-font-color;
+$card-divider-background: $light-gray;
+$card-border: 1px solid $light-gray;
+$card-shadow: none;
+$card-border-radius: $global-radius;
+$card-padding: $global-padding;
+$card-margin-bottom: $global-margin;

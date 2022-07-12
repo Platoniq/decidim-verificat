@@ -17,7 +17,7 @@
 
   .main-nav__link--active a {
     box-shadow: none;
-    background-color: $background-gradient;
+    background: $background-gradient;
     color: $color-white;
     font-weight: 700;
   }
@@ -166,7 +166,7 @@
       &:hover,
       &:focus {
         text-decoration: none;
-        background-color: $background-gradient;
+        background: $background-gradient;
       }
     }
   }

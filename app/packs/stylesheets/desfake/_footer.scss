@@ -2,10 +2,31 @@
 
 .main-footer {
   background: $secondary-color;
-  color: $color-white;
 }
 
 .mini-footer {
   background: $primary-color;
+
+  .logos {
+    display: flex;
+    align-items: end;
+    padding: 1rem;
+  }
+
+  .row .column:first-child {
+    padding: 1rem;
+  }
+}
+
+.main-footer,
+.mini-footer {
   color: $color-white;
+  a {
+    color: $color-white;
+    &:hover,
+    &:focus {
+      color: $color-white;
+      text-decoration: underline;
+    }
+  }
 }
