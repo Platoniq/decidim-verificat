@@ -5,3 +5,132 @@
 // To override styles use decidim_application.scss
 //
 // By default this is empty.
+
+$global-font-size: 100%;
+$global-width: rem-calc(1200);
+$global-lineheight: 135%;
+$foundation-palette: (
+  primary: #ff780d,
+  secondary: #ffa800,
+  success: #00ffa8,
+  warning: #000000,
+  alert: #ff0057,
+  white: #ffffff,
+  dislike: #cb38ff,
+  cat1: #ff9900,
+  cat2: #5bd8ff,
+  cat3: #69ea04,
+  cat4: #8800bd,
+  cat5: #ff00e5,
+  cat6: #cf93ff,
+  cat7: #4978f1,
+  cat8: #0343a3,
+  cat9: #cc4343,
+  cat10: #0b8282,
+  cat11: #ff3300,
+  cat12: #0adba9,
+);
+$light-gray: #e6e6e6;
+$medium-gray: #cacaca;
+$dark-gray: #8a8a8a;
+$black: #0a0a0a;
+$white: #fff;
+$body-background: $white;
+$body-font-color: $black;
+$body-font-family: "Roboto Flex", sans-serif;
+$body-antialiased: true;
+$global-margin: 1rem;
+$global-padding: 1rem;
+$global-position: 1rem;
+$global-weight-normal: 400;
+$global-weight-bold: 700;
+$global-radius: 1px;
+$global-menu-padding: 0.7rem 1rem;
+$global-menu-nested-margin: 1rem;
+$global-text-direction: ltr;
+$global-flexbox: true;
+$global-prototype-breakpoints: false;
+$global-button-cursor: auto;
+$global-color-pick-contrast-tolerance: 0;
+$print-transparent-backgrounds: true;
+$print-hrefs: true;
+
+@include add-foundation-colors;
+
+$header-font-family: $body-font-family;
+$header-font-weight: $global-weight-bold;
+$header-font-style: normal;
+$header-color: inherit;
+$header-lineheight: 1.1;
+$header-margin-bottom: 0.5rem;
+$header-styles: (
+  small: (
+    "h1": (
+      "font-size": 3.998rem,
+      "line-height": $header-lineheight,
+      "font-weight": 800,
+    ),
+    "h2": (
+      "font-size": 2.827rem,
+      "line-height": $header-lineheight,
+      "font-weight": 800,
+    ),
+    "h3": (
+      "font-size": 1.999rem,
+      "line-height": $header-lineheight,
+      "font-weight": 700,
+    ),
+    "h4": (
+      "font-size": 1.414rem,
+      "line-height": $header-lineheight,
+      "font-weight": 700,
+    ),
+    "h5": (
+      "font-size": 1rem,
+      "line-height": 135%,
+      "font-weight": 700,
+    ),
+    "h6": (
+      "font-size": 0.889rem,
+      "line-height": 135%,
+      "font-weight": 700,
+    ),
+  ),
+  medium: (
+    "h1": (
+      "font-size": 5.653rem,
+      "line-height": $header-lineheight,
+      "font-weight": 800,
+    ),
+    "h2": (
+      "font-size": 3.998rem,
+      "line-height": $header-lineheight,
+      "font-weight": 800,
+    ),
+    "h3": (
+      "font-size": 2.827rem,
+      "line-height": $header-lineheight,
+      "font-weight": 800,
+    ),
+    "h4": (
+      "font-size": 1.999rem,
+      "line-height": $header-lineheight,
+      "font-weight": 700,
+    ),
+    "h5": (
+      "font-size": 1.414rem,
+      "line-height": $header-lineheight,
+      "font-weight": 700,
+    ),
+    "h6": (
+      "font-size": 1rem,
+      "line-height": 135%,
+      "font-weight": 700,
+    ),
+  ),
+);
+
+$anchor-color: $primary-color;
+$anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
+$anchor-text-decoration: none;
+$anchor-text-decoration-hover: none;
