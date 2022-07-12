@@ -5,3 +5,173 @@
 // To override styles use decidim_application.scss
 //
 // By default this is empty.
+
+$global-font-size: 100%;
+$global-width: rem-calc(1200);
+$global-lineheight: 135%;
+$foundation-palette: (
+  primary: #ff780d,
+  secondary: #ffa800,
+  success: #00ffa8,
+  warning: #000000,
+  alert: #ff0057,
+  white: #ffffff,
+  dislike: #cb38ff,
+  cat1: #ff9900,
+  cat2: #5bd8ff,
+  cat3: #69ea04,
+  cat4: #8800bd,
+  cat5: #ff00e5,
+  cat6: #cf93ff,
+  cat7: #4978f1,
+  cat8: #0343a3,
+  cat9: #cc4343,
+  cat10: #0b8282,
+  cat11: #ff3300,
+  cat12: #0adba9,
+);
+$light-gray: #e6e6e6;
+$medium-gray: #cacaca;
+$dark-gray: #8a8a8a;
+$black: #0a0a0a;
+$white: #fff;
+$body-background: $white;
+$body-font-color: $black;
+$body-font-family: "Roboto Flex", sans-serif;
+$body-antialiased: true;
+$global-margin: 1rem;
+$global-padding: 1rem;
+$global-position: 1rem;
+$global-weight-normal: 400;
+$global-weight-bold: 700;
+$global-radius: 20px;
+$global-menu-padding: 0.7rem 1rem;
+$global-menu-nested-margin: 1rem;
+$global-text-direction: ltr;
+$global-flexbox: true;
+$global-prototype-breakpoints: false;
+$global-button-cursor: auto;
+$global-color-pick-contrast-tolerance: 0;
+$print-transparent-backgrounds: true;
+$print-hrefs: true;
+
+@include add-foundation-colors;
+
+$header-font-family: $body-font-family;
+$header-font-weight: $global-weight-bold;
+$header-font-style: normal;
+$header-color: inherit;
+$header-lineheight: 1.1;
+$header-margin-bottom: 0.5rem;
+$header-styles: (
+  small: (
+    "h1": (
+      "font-size": 3.998rem,
+      "line-height": $header-lineheight,
+      "font-weight": 800,
+    ),
+    "h2": (
+      "font-size": 2.827rem,
+      "line-height": $header-lineheight,
+      "font-weight": 800,
+    ),
+    "h3": (
+      "font-size": 1.999rem,
+      "line-height": $header-lineheight,
+      "font-weight": 700,
+    ),
+    "h4": (
+      "font-size": 1.414rem,
+      "line-height": $header-lineheight,
+      "font-weight": 700,
+    ),
+    "h5": (
+      "font-size": 1rem,
+      "line-height": 135%,
+      "font-weight": 700,
+    ),
+    "h6": (
+      "font-size": 0.889rem,
+      "line-height": 135%,
+      "font-weight": 700,
+    ),
+  ),
+  medium: (
+    "h1": (
+      "font-size": 5.653rem,
+      "line-height": $header-lineheight,
+      "font-weight": 800,
+    ),
+    "h2": (
+      "font-size": 3.998rem,
+      "line-height": $header-lineheight,
+      "font-weight": 800,
+    ),
+    "h3": (
+      "font-size": 2.827rem,
+      "line-height": $header-lineheight,
+      "font-weight": 800,
+    ),
+    "h4": (
+      "font-size": 1.999rem,
+      "line-height": $header-lineheight,
+      "font-weight": 700,
+    ),
+    "h5": (
+      "font-size": 1.414rem,
+      "line-height": $header-lineheight,
+      "font-weight": 700,
+    ),
+    "h6": (
+      "font-size": 1rem,
+      "line-height": 135%,
+      "font-weight": 700,
+    ),
+  ),
+);
+
+$anchor-color: $primary-color;
+$anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
+$anchor-text-decoration: none;
+$anchor-text-decoration-hover: none;
+
+// 11. Button
+// ----------
+
+$button-font-family: inherit;
+$button-font-weight: null;
+$button-padding: 0.85em 1em;
+$button-margin: 0 0 $global-margin 0;
+$button-fill: solid;
+$button-color: $primary-color;
+$button-color-alt: $primary-color;
+$button-background: $white;
+$button-background-hover: $button-background;
+$button-shadow-depth: 6px;
+$button-radius: $global-radius;
+$button-border: 1px solid $primary-color;
+$button-hollow-border-width: 1px;
+$button-sizes: (
+  tiny: 0.6rem,
+  small: 0.75rem,
+  default: 0.9rem,
+  large: 1.25rem,
+);
+$button-palette: $foundation-palette;
+$button-opacity-disabled: 0.5;
+$button-background-hover-lightness: 0%;
+$button-hollow-hover-lightness: 0%;
+$button-transition: none;
+$button-responsive-expanded: false;
+
+// 14. Card
+// --------
+
+$card-background: $white;
+$card-font-color: $body-font-color;
+$card-divider-background: $light-gray;
+$card-border: 1px solid $light-gray;
+$card-shadow: none;
+$card-border-radius: $global-radius;
+$card-padding: $global-padding;
+$card-margin-bottom: $global-margin;

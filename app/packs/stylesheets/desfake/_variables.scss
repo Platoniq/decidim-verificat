@@ -1,0 +1,64 @@
+@import "../decidim/decidim-settings";
+
+@function extract-rgb($color) {
+  @return red($color), green($color), blue($color);
+}
+
+$color-white: #ffffff;
+$color-black: #2b2b2b;
+$color-grey-light: #e6e6e6;
+$color-grey-dark: #959595;
+$color-verificat-blue: #0d43e6;
+$color-verificat-white: #f7f7f5;
+$color-yellow: #ffa800;
+$color-orange: #ff780d;
+$color-orange-darker: #ff6b00;
+$color-red: #ff0057;
+$color-green: #00ffa8;
+$background-gradient: linear-gradient(230.05deg, $color-orange 23.96%, $color-yellow 80.75%);
+
+$primary-color: $color-orange;
+$secondary-color: $color-yellow;
+$success-color: $color-green;
+$warning-color: $color-black;
+$alert-color: $color-red;
+$primary-color-rgb: extract-rgb($primary-color);
+$secondary-color-rgb: extract-rgb($secondary-color);
+$success-color-rgb: extract-rgb($success-color);
+$warning-color-rgb: extract-rgb($warning-color);
+$alert-color-rgb: extract-rgb($alert-color);
+
+$body-font-color: $color-black;
+$anchor-color: $body-font-color;
+
+$button-background: $color-white;
+
+// Variables
+
+$hue: (
+  primary: hue($primary-color),
+  secondary: hue($secondary-color),
+  success: hue($success-color),
+  warning: hue($warning-color),
+  alert: hue($alert-color),
+);
+
+:root {
+  --primary: #{$primary-color};
+  --primary-rgb: #{$primary-color-rgb};
+  --secondary: #{$secondary-color};
+  --secondary-rgb: #{$secondary-color-rgb};
+  --success: #{$success-color};
+  --success-rgb: #{$success-color-rgb};
+  --warning: #{$warning-color};
+  --warning-rgb: #{$warning-color-rgb};
+  --alert: #{$alert-color};
+  --alert-rgb: #{$alert-color-rgb};
+}
+
+$global-radius: 20px;
+
+$button-padding: 0.85em 1em;
+$button-margin: 0 0 $global-margin 0;
+$button-border: 1px solid $primary-color;
+$button-radius: $global-radius;

@@ -12,9 +12,9 @@ gem "decidim", DECIDIM_VERSION
 # gem "decidim-initiatives", DECIDIM_VERSION
 # gem "decidim-templates", DECIDIM_VERSION
 
+gem "decidim-access_codes", git: "https://github.com/Platoniq/decidim-module-access_codes"
 gem "decidim-decidim_awesome"
 gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: :develop
-gem "decidim-access_codes", git: "https://github.com/Platoniq/decidim-module-access_codes"
 
 gem "bootsnap", "~> 1.3"
 

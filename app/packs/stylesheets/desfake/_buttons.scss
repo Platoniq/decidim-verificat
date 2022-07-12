@@ -1,0 +1,13 @@
+@import "./variables";
+
+.button {
+  background-color: $color-white;
+  color: $primary-color;
+
+  &:hover,
+  &:focus {
+    background: $background-gradient;
+    color: $color-white;
+    transition: all ease-in-out 200ms;
+  }
+}

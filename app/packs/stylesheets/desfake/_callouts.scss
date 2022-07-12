@@ -1,0 +1,24 @@
+.callout.primary {
+  border-left: none;
+  background-color: hsl(map-get($hue, primary), 60, 90);
+}
+
+.callout.secondary {
+  border-left: none;
+  background-color: hsl(map-get($hue, secondary), 60, 90);
+}
+
+.callout.success {
+  border-left: none;
+  background-color: hsl(map-get($hue, success), 60, 90);
+}
+
+.callout.warning {
+  border-left: none;
+  background-color: hsl(map-get($hue, warning), 60, 90);
+}
+
+.callout.alert {
+  border-left: none;
+  background-color: hsl(map-get($hue, alert), 60, 90);
+}
