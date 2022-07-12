@@ -1,24 +1,24 @@
 @import "./variables";
 
 .title-bar {
-  background-color: $white;
+  background-color: $color-white;
 }
 
 .navbar {
-  background-color: $white;
+  background-color: $color-white;
 
-  border-top: 2px solid $primary-color;
+  border-top: 1px solid $primary-color;
 
   .main-nav__link a {
     color: $primary-color;
-    text-transform: uppercase;
+    // text-transform: none;
     padding-bottom: 8px;
   }
 
   .main-nav__link--active a {
     box-shadow: none;
-    background: $background-gradient;
-    color: $body-font-color;
+    background-color: $background-gradient;
+    color: $color-white;
     font-weight: 700;
   }
 }
@@ -43,7 +43,7 @@
     max-width: inherit;
 
     input {
-      background: $white;
+      background: $color-white;
       box-shadow: none;
       margin-top: 8px;
       display: inline-block;
@@ -68,7 +68,7 @@
       .button {
         border: none;
         height: 2.5rem;
-        background: $white;
+        background: $color-white;
         transition: none;
         box-shadow: none;
 
@@ -142,34 +142,32 @@
   }
 
   &_user__login {
-    .sign-up-link {
-      @extend .button;
-      display: inline;
-      width: 100%;
-      margin-right: 0;
-      margin-left: 0;
-      background-color: $primary-color;
-      color: $white;
-      margin: $button-margin;
-      padding: $button-padding;
-      border: $button-border;
-      border-radius: $button-radius;
-      transition: none;
-      line-height: 1;
-      text-align: center;
-      letter-spacing: 0.05em;
-      font-weight: 600;
-      text-transform: uppercase;
-      position: relative;
-
-      &:hover {
-        text-decoration: none;
-      }
-    }
-
+    .sign-up-link,
     .sign-in-link {
-      color: $primary-color;
-      text-transform: uppercase;
+      @extend .button;
+      text-transform: none;
+      // display: inline;
+      // width: 100%;
+      // margin-right: 0;
+      // margin-left: 0;
+      // background-color: $color-white;
+      // color: $primary-color;
+      // margin: $button-margin;
+      // padding: $button-padding;
+      // border: $button-border;
+      // border-radius: $button-radius;
+      // transition: none;
+      // line-height: 1;
+      // text-align: center;
+      // letter-spacing: 0.05em;
+      // font-weight: 600;
+      // position: relative;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        background-color: $background-gradient;
+      }
     }
   }
 }
