@@ -1,24 +1,12 @@
-.callout.primary {
-  border-left: none;
-  background-color: hsl(map-get($hue, primary), 60, 90);
-}
+@import "./variables";
 
-.callout.secondary {
-  border-left: none;
-  background-color: hsl(map-get($hue, secondary), 60, 90);
-}
+$saturation: 60%;
+$lightness: 90%;
 
-.callout.success {
-  border-left: none;
-  background-color: hsl(map-get($hue, success), 60, 90);
-}
+@each $name, $color in $color-palette {
+  .callout.#{$name} {
+    border-left: none;
 
-.callout.warning {
-  border-left: none;
-  background-color: hsl(map-get($hue, warning), 60, 90);
-}
-
-.callout.alert {
-  border-left: none;
-  background-color: hsl(map-get($hue, alert), 60, 90);
+    background-color: hsl(hue($color), $saturation, $lightness);
+  }
 }

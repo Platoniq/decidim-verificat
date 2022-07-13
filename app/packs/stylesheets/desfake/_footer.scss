@@ -20,13 +20,17 @@
 
 .main-footer,
 .mini-footer {
-  color: $color-white;
+  color: $white;
   a {
-    color: $color-white;
+    color: $white;
     &:hover,
     &:focus {
-      color: $color-white;
+      color: $white;
       text-decoration: underline;
     }
   }
+}
+
+.decidim-logo:not(.platoniq-logo) {
+  margin-bottom: 8px;
 }

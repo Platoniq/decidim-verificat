@@ -1,13 +1,38 @@
 @import "./variables";
 
 .button {
-  background-color: $color-white;
+  background-color: $white;
   color: $primary-color;
 
   &:hover,
   &:focus {
-    background: $background-gradient;
-    color: $color-white;
-    transition: all ease-in-out 200ms;
+    background: $desfake-gradient;
+    color: $white;
+    transition: background ease-in-out 200ms;
+  }
+}
+
+.button--sc {
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+@each $name, $color in $color-palette {
+  .button.#{$name} {
+    border-color: $color;
+
+    &.hover,
+    &:hover {
+      background: $color;
+      color: $white;
+    }
+  }
+
+  .button.hollow.#{$name} {
+    &.hover,
+    &:hover {
+      background: $white;
+      color: $color;
+    }
   }
 }

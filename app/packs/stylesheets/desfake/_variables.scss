@@ -1,47 +1,26 @@
-@import "../decidim/decidim-settings";
-
 @function extract-rgb($color) {
   @return red($color), green($color), blue($color);
 }
 
-$color-white: #ffffff;
-$color-black: #2b2b2b;
-$color-grey-light: #e6e6e6;
-$color-grey-dark: #959595;
 $color-verificat-blue: #0d43e6;
 $color-verificat-white: #f7f7f5;
-$color-yellow: #ffa800;
-$color-orange: #ff780d;
-$color-orange-darker: #ff6b00;
-$color-red: #ff0057;
-$color-green: #00ffa8;
-$background-gradient: linear-gradient(230.05deg, $color-orange 23.96%, $color-yellow 80.75%);
 
-$primary-color: $color-orange;
-$secondary-color: $color-yellow;
-$success-color: $color-green;
-$warning-color: $color-black;
-$alert-color: $color-red;
+$color-desfake-yellow: #ffa800;
+$color-desfake-orange: #ff780d;
+$color-desfake-orange-darker: #ff6b00;
+
+$desfake-gradient: linear-gradient(230.05deg, $color-desfake-orange 23.96%, $color-desfake-yellow 80.75%);
+
+$primary-color: $color-desfake-orange;
+$secondary-color: $color-desfake-yellow;
+$success-color: #00be54;
+$warning-color: $black;
+$alert-color: #ff0057;
 $primary-color-rgb: extract-rgb($primary-color);
 $secondary-color-rgb: extract-rgb($secondary-color);
 $success-color-rgb: extract-rgb($success-color);
 $warning-color-rgb: extract-rgb($warning-color);
 $alert-color-rgb: extract-rgb($alert-color);
-
-$body-font-color: $color-black;
-$anchor-color: $body-font-color;
-
-$button-background: $color-white;
-
-// Variables
-
-$hue: (
-  primary: hue($primary-color),
-  secondary: hue($secondary-color),
-  success: hue($success-color),
-  warning: hue($warning-color),
-  alert: hue($alert-color),
-);
 
 :root {
   --primary: #{$primary-color};
@@ -56,9 +35,201 @@ $hue: (
   --alert-rgb: #{$alert-color-rgb};
 }
 
-$global-radius: 20px;
+// This is a file that can be overridden by the application in order to override
+// some of the Foundation/Decidim SCSS settings and variables after the default
+// settings have been loaded.
+//
+// To override styles use decidim_application.scss
+//
+// By default this is empty.
 
+$global-font-size: 100%;
+$global-width: rem-calc(1200);
+$global-lineheight: 135%;
+$color-palette: (
+  primary: $primary-color,
+  secondary: $secondary-color,
+  success: $success-color,
+  warning: $warning-color,
+  alert: $alert-color,
+);
+$foundation-palette: (
+  primary: $primary-color,
+  secondary: $secondary-color,
+  success: $success-color,
+  warning: $warning-color,
+  alert: $alert-color,
+  white: $white,
+  dislike: #cb38ff,
+  cat1: #ff9900,
+  cat2: #5bd8ff,
+  cat3: #69ea04,
+  cat4: #8800bd,
+  cat5: #ff00e5,
+  cat6: #cf93ff,
+  cat7: #4978f1,
+  cat8: #0343a3,
+  cat9: #cc4343,
+  cat10: #0b8282,
+  cat11: #ff3300,
+  cat12: #0adba9,
+);
+$medium-gray: #e6e6e6;
+$dark-gray: #959595;
+$white: #ffffff;
+$black: #2b2b2b;
+$body-background: $white;
+$body-font-color: $black;
+$body-font-family: "Roboto Flex", sans-serif;
+$body-antialiased: true;
+$global-margin: 1rem;
+$global-padding: 1rem;
+$global-position: 1rem;
+$global-weight-normal: 300;
+$global-weight-bold: 700;
+$global-radius: 20px;
+$global-menu-padding: 0.7rem 1rem;
+$global-menu-nested-margin: 1rem;
+$global-text-direction: ltr;
+$global-flexbox: true;
+$global-prototype-breakpoints: false;
+$global-button-cursor: auto;
+$global-color-pick-contrast-tolerance: 0;
+$print-transparent-backgrounds: true;
+$print-hrefs: true;
+
+$header-font-family: $body-font-family;
+$header-font-weight: $global-weight-bold;
+$header-font-style: normal;
+$header-color: inherit;
+$header-lineheight: 1.1;
+$header-margin-bottom: 0.5rem;
+$header-styles: (
+  small: (
+    "h1": (
+      "font-size": 3.75rem,
+      "line-height": $header-lineheight,
+      "font-weight": 900,
+    ),
+    "h2": (
+      "font-size": 1.5625rem,
+      "line-height": $header-lineheight,
+      "font-weight": 300,
+    ),
+    "h3": (
+      "font-size": 2rem,
+      "line-height": $header-lineheight,
+      "font-weight": 800,
+    ),
+    "h4": (
+      "font-size": 1.25rem,
+      "line-height": $header-lineheight,
+      "font-weight": 500,
+    ),
+    "h5": (
+      "font-size": 1.25rem,
+      "line-height": 135%,
+      "font-weight": 300,
+    ),
+    "h6": (
+      "font-size": 1rem,
+      "line-height": 135%,
+      "font-weight": 700,
+    ),
+  ),
+  medium: (
+    "h1": (
+      "font-size": 3.75rem,
+      "line-height": $header-lineheight,
+      "font-weight": 900,
+    ),
+    "h2": (
+      "font-size": 1.5625rem,
+      "line-height": $header-lineheight,
+      "font-weight": 300,
+    ),
+    "h3": (
+      "font-size": 2rem,
+      "line-height": $header-lineheight,
+      "font-weight": 800,
+    ),
+    "h4": (
+      "font-size": 1.25rem,
+      "line-height": $header-lineheight,
+      "font-weight": 500,
+    ),
+    "h5": (
+      "font-size": 1.25rem,
+      "line-height": 135%,
+      "font-weight": 300,
+    ),
+    "h6": (
+      "font-size": 1rem,
+      "line-height": 135%,
+      "font-weight": 700,
+    ),
+  ),
+);
+
+$anchor-color: $primary-color;
+$anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
+$anchor-text-decoration: none;
+$anchor-text-decoration-hover: none;
+
+// 11. Button
+// ----------
+
+$button-font-family: inherit;
+$button-font-weight: $global-weight-normal;
 $button-padding: 0.85em 1em;
 $button-margin: 0 0 $global-margin 0;
+$button-fill: solid;
+$button-color: $primary-color;
+$button-color-alt: $primary-color;
+$button-background: $white;
+$button-background-hover: $button-background;
+$button-shadow-depth: 6px;
+$button-radius: 5px;
 $button-border: 1px solid $primary-color;
-$button-radius: $global-radius;
+$button-hollow-border-width: 1px;
+$button-sizes: (
+  tiny: 0.6rem,
+  small: 0.75rem,
+  default: 0.9rem,
+  large: 1.25rem,
+);
+$button-palette: $foundation-palette;
+$button-opacity-disabled: 0.5;
+$button-background-hover-lightness: 0%;
+$button-hollow-hover-lightness: 0%;
+$button-transition: none;
+$button-responsive-expanded: false;
+
+// 14. Card
+// --------
+
+$card-background: $white;
+$card-font-color: $body-font-color;
+$card-divider-background: $primary-color;
+$card-border: 1px solid $primary-color;
+$card-shadow: none;
+$card-border-radius: $global-radius;
+$card-padding: $global-padding;
+$card-margin-bottom: $global-margin;
+
+// 51. Tabs
+// --------
+
+$tab-margin: 0;
+$tab-background: $white;
+$tab-background-active: $white;
+$tab-item-font-size: rem-calc(16);
+$tab-color: $primary-color;
+$tab-active-color: inherit;
+$tab-item-background-hover: $white;
+$tab-item-padding: 1.25rem 1.5rem;
+$tab-expand-max: 6;
+$tab-content-background: $white;
+$tab-content-border: transparent;
+$tab-content-color: inherit;
+$tab-content-padding: 0;
