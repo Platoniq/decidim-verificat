@@ -1,11 +1,11 @@
 @import "./variables";
 
 .title-bar {
-  background-color: $color-white;
+  background-color: $white;
 }
 
 .navbar {
-  background-color: $color-white;
+  background-color: $white;
 
   border-top: 1px solid $primary-color;
 
@@ -17,8 +17,8 @@
 
   .main-nav__link--active a {
     box-shadow: none;
-    background: $background-gradient;
-    color: $color-white;
+    background: $desfake-gradient;
+    color: $white;
     font-weight: 700;
   }
 }
@@ -43,7 +43,7 @@
     max-width: inherit;
 
     input {
-      background: $color-white;
+      background: $white;
       box-shadow: none;
       margin-top: 8px;
       display: inline-block;
@@ -68,7 +68,7 @@
       .button {
         border: none;
         height: 2.5rem;
-        background: $color-white;
+        background: $white;
         transition: none;
         box-shadow: none;
 
@@ -150,7 +150,7 @@
       // width: 100%;
       // margin-right: 0;
       // margin-left: 0;
-      // background-color: $color-white;
+      // background-color: $white;
       // color: $primary-color;
       // margin: $button-margin;
       // padding: $button-padding;
@@ -166,7 +166,7 @@
       &:hover,
       &:focus {
         text-decoration: none;
-        background: $background-gradient;
+        background: $desfake-gradient;
       }
     }
   }
