@@ -104,12 +104,16 @@
   }
 
   &_dropmenu {
+    .menu > li.is-active > a {
+      color: $primary-color;
+    }
+
     .is-dropdown-submenu li a,
     & > ul > li > a {
-      color: $body-font-color;
+      color: $primary-color;
 
       &::after {
-        border-top-color: $body-font-color !important;
+        border-top-color: $primary-color !important;
       }
     }
   }
@@ -118,15 +122,15 @@
   &_edit_ {
     &_link {
       a {
-        color: $body-font-color;
+        color: $primary-color;
 
         &:hover {
-          color: $body-font-color;
+          color: $primary-color;
         }
       }
 
       .icon {
-        fill: $body-font-color;
+        fill: $primary-color;
         opacity: 1;
       }
     }
@@ -135,7 +139,7 @@
   &_notifications,
   &_conversations {
     .icon {
-      fill: $body-font-color;
+      fill: $primary-color;
       opacity: 1;
     }
   }

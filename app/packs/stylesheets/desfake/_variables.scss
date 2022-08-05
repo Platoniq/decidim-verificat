@@ -13,7 +13,7 @@ $desfake-gradient: linear-gradient(230.05deg, $color-desfake-orange 23.96%, $col
 
 $primary-color: $color-desfake-orange;
 $primary-color-darker: $color-desfake-orange;
-$secondary-color: $color-desfake-yellow;
+$secondary-color: $primary-color;
 $success-color: #00be54;
 $warning-color: $black;
 $alert-color: #ff0057;
@@ -75,6 +75,7 @@ $foundation-palette: (
   cat11: #ff3300,
   cat12: #0adba9,
 );
+$light-gray: #d7d7d7;
 $medium-gray: #e6e6e6;
 $dark-gray: #959595;
 $white: #ffffff;
@@ -212,7 +213,7 @@ $button-responsive-expanded: false;
 $card-background: $white;
 $card-font-color: $body-font-color;
 $card-divider-background: $primary-color;
-$card-border: 1px solid $primary-color;
+$card-border: 1px solid $light-gray;
 $card-shadow: none;
 $card-border-radius: $global-radius;
 $card-padding: $global-padding;
@@ -241,7 +242,7 @@ $card-margin-bottom: $global-margin;
 // $select-triangle-color: $primary-color-darker;
 // $select-radius: $global-radius;
 // $input-color: $black;
-// $input-placeholder-color: $primary-color;
+$input-placeholder-color: $primary-color;
 // $input-font-family: inherit;
 // $input-font-size: rem-calc(16);
 // $input-font-weight: $global-weight-normal;

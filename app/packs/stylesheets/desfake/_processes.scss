@@ -1,0 +1,45 @@
+@import "./variables";
+
+.process-nav {
+  box-shadow: none;
+  border-bottom: 1px solid $primary-color;
+
+  ul {
+    gap: 1rem;
+  }
+}
+
+.process-nav__link {
+  text-transform: none;
+  color: $white;
+
+  &:hover,
+  &:focus {
+    color: $light-gray;
+    text-decoration: none;
+  }
+
+  &.active {
+    color: $primary-color;
+    border-radius: 20px;
+  }
+}
+
+.process-nav__content li.is-active {
+  box-shadow: none;
+}
+
+/* TODO: Cleanup (pasted from browser inspector) */
+.process-nav li {
+  padding: 0.5rem 0.75rem 0.875rem;
+  background-color: $primary-color;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 0.5rem 2rem;
+
+  &.is-active {
+    background-color: $white;
+    border: 1px solid $primary-color;
+    border-bottom: none;
+  }
+}

@@ -6,7 +6,7 @@
 
   &:hover,
   &:focus {
-    background: $desfake-gradient;
+    background: $primary-color-darker;
     color: $white !important;
     transition: background ease-in-out 200ms;
   }
@@ -19,20 +19,24 @@
 
 @each $name, $color in $color-palette {
   .button.#{$name} {
-    border-color: $color;
+    border-color: $primary-color;
 
     &.hover,
     &:hover {
-      background: $color;
-      color: $white;
+      background: $medium-gray;
+      color: $body-font-color;
+      border: none;
     }
   }
 
   .button.hollow.#{$name} {
+    border-color: $primary-color;
+    color: $primary-color;
+
     &.hover,
     &:hover {
-      background: $white;
-      color: $color;
+      background: $medium-gray;
+      color: $body-font-color;
     }
   }
 }

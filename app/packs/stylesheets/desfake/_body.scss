@@ -3,3 +3,13 @@
 .off-canvas-wrapper {
   background-color: $body-background;
 }
+
+.section-heading {
+  color: $primary-color;
+
+  &::before {
+    background-color: $primary-color;
+    border-radius: 50%;
+    width: 1.35rem;
+  }
+}
