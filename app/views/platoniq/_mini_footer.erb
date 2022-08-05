@@ -1,12 +1,12 @@
 <div class="mini-footer">
   <div class="row">
     <div class="medium-12 large-12 column">
+      <%= t("platoniq.footer.made_with_open_source", repository: Rails.application.secrets.repository_url).html_safe %>
       <a rel="license noopener" class="cc-badge"
          href="http://creativecommons.org/licenses/by-sa/4.0/"
          target="_blank">
         <%= image_pack_tag("media/images/cc-badge.png", alt: t("layouts.decidim.footer.cc_by_license")) %>
       </a>
-      <%= t("platoniq.footer.made_with_open_source", repository: Rails.application.secrets.repository_url).html_safe %>
     </div>
     <div class="medium-12 large-12 column logos">
       <div class="decidim-logo platoniq-logo">

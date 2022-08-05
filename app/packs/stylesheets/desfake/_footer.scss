@@ -4,17 +4,21 @@
   display: flex;
 }
 
+.mini-footer,
+.main-footer {
+  background: $primary-color;
+}
+
 .main-footer {
   width: 75%;
-  background: $secondary-color;
 }
 
 .mini-footer {
   width: 25%;
-  background: $primary-color;
 
   .logos {
     display: flex;
+    flex-wrap: wrap;
     align-items: end;
     padding: 1rem;
   }
