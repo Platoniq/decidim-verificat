@@ -1,25 +1,26 @@
 @import "./variables";
 
+.logo-wrapper img {
+  max-width: 10rem;
+}
+
 .title-bar {
   background-color: $white;
 }
 
 .navbar {
-  background-color: $white;
-
-  border-top: 1px solid $primary-color;
+  background-color: $primary-color;
+  border: none;
 
   .main-nav__link a {
-    color: $primary-color;
+    color: $white;
     // text-transform: none;
     padding-bottom: 8px;
   }
 
   .main-nav__link--active a {
     box-shadow: none;
-    background: $desfake-gradient;
-    color: $white;
-    font-weight: 700;
+    background: $primary-color-darker;
   }
 }
 
@@ -47,7 +48,7 @@
       box-shadow: none;
       margin-top: 8px;
       display: inline-block;
-      border: none;
+      border: $button-border;
       transition: none;
       height: 2.5rem; //matches input group button height
 
@@ -71,6 +72,8 @@
         background: $white;
         transition: none;
         box-shadow: none;
+        border: $button-border;
+        border-left: none;
 
         &:hover {
           top: 0;
@@ -90,7 +93,7 @@
     .input-group {
       margin-bottom: 0;
       border: $input-border;
-      border-radius: 3px;
+      border-radius: 50%;
     }
 
     &:not(:focus-within) {
@@ -142,32 +145,21 @@
   }
 
   &_user__login {
-    .sign-up-link,
-    .sign-in-link {
-      @extend .button;
+    a {
+      border: $button-border;
+      border-radius: $button-radius;
       text-transform: none;
-      // display: inline;
-      // width: 100%;
-      // margin-right: 0;
-      // margin-left: 0;
-      // background-color: $white;
-      // color: $primary-color;
-      // margin: $button-margin;
-      // padding: $button-padding;
-      // border: $button-border;
-      // border-radius: $button-radius;
-      // transition: none;
-      // line-height: 1;
-      // text-align: center;
-      // letter-spacing: 0.05em;
-      // font-weight: 600;
-      // position: relative;
+      padding: $button-padding;
 
       &:hover,
       &:focus {
         text-decoration: none;
         background: $desfake-gradient;
       }
+    }
+
+    .sign-in-link {
+      background-color: $primary-color;
     }
   }
 }

@@ -7,7 +7,7 @@
   &:hover,
   &:focus {
     background: $desfake-gradient;
-    color: $white;
+    color: $white !important;
     transition: background ease-in-out 200ms;
   }
 }

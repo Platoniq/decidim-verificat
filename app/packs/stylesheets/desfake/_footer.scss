@@ -1,10 +1,16 @@
 @import "./variables";
 
+.footer {
+  display: flex;
+}
+
 .main-footer {
+  width: 75%;
   background: $secondary-color;
 }
 
 .mini-footer {
+  width: 25%;
   background: $primary-color;
 
   .logos {
