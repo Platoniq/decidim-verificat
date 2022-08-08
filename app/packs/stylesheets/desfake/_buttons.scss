@@ -1,15 +1,11 @@
 @import "./variables";
+@import "./mixins";
 
 .button {
   background-color: $white;
   color: $primary-color;
 
-  &:hover,
-  &:focus {
-    background: $primary-color-darker;
-    color: $white !important;
-    transition: background ease-in-out 200ms;
-  }
+  @include button-hover;
 }
 
 .button--sc {
@@ -21,22 +17,13 @@
   .button.#{$name} {
     border-color: $primary-color;
 
-    &.hover,
-    &:hover {
-      background: $medium-gray;
-      color: $body-font-color;
-      border: none;
-    }
+    @include button-hover;
   }
 
   .button.hollow.#{$name} {
     border-color: $primary-color;
     color: $primary-color;
 
-    &.hover,
-    &:hover {
-      background: $medium-gray;
-      color: $body-font-color;
-    }
+    @include button-hover;
   }
 }

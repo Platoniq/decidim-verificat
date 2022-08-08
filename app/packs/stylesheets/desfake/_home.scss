@@ -1,4 +1,5 @@
 @import "./variables";
+@import "./mixins";
 
 .home-section:nth-of-type(2n + 1) {
   background: $desfake-gradient;
@@ -12,10 +13,7 @@
     background: $white;
     color: $primary-color;
 
-    // &:hover,
-    // &:focus {
-    //   color: $primary-color;
-    // }
+    @include button-hover;
   }
 
   .home-bullet__icon svg {
