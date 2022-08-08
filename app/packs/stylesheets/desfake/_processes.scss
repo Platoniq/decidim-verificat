@@ -15,31 +15,52 @@
 
   &:hover,
   &:focus {
-    color: $light-gray;
     text-decoration: none;
   }
 
+  @include button-hover;
+
   &.active {
     color: $primary-color;
-    border-radius: 20px;
   }
 }
 
-.process-nav__content li.is-active {
-  box-shadow: none;
+.process-nav__content {
+  align-items: end;
+  margin-top: 1rem;
+  margin-bottom: -1px;
+
+  li {
+    padding: 0.5rem 0.75rem 0.875rem;
+    background-color: $primary-color;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 0.5rem 2rem;
+
+    &.is-active {
+      background-color: $white;
+      border: 1px solid $primary-color;
+      border-bottom: none;
+      box-shadow: none;
+    }
+
+    &:hover,
+    &:focus {
+      background: $desfake-gradient;
+      color: $white;
+      transition: background color ease-in-out 200ms;
+    }
+  }
 }
 
-/* TODO: Cleanup (pasted from browser inspector) */
-.process-nav li {
-  padding: 0.5rem 0.75rem 0.875rem;
-  background-color: $primary-color;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  padding: 0.5rem 2rem;
+.process-header__inner {
+  min-height: 20rem;
+}
 
-  &.is-active {
-    background-color: $white;
-    border: 1px solid $primary-color;
-    border-bottom: none;
+.process-header__main {
+  clip-path: none;
+
+  &::after {
+    content: none;
   }
 }
