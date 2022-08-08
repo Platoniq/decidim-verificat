@@ -1,17 +1,27 @@
 <div class="main-footer">
   <div class="row">
-    <div class="columns large-12">
+    <div class="column large-12">
+      <a rel="noopener"
+          href="https://desfake.cat"
+          target="_blank">
+        <%= image_pack_tag("media/images/desfake-logo.svg", alt: t("desfake.footer.desfake_logo")) %>
+      </a>
       <%= t("desfake.footer.project_by") %>
+      <a rel="noopener"
+          href="https://verificat.cat"
+          target="_blank">
+        <%= image_pack_tag("media/images/verificat-logo.svg", alt: t("desfake.footer.verificat_logo")) %>
+      </a>
     </div>
   </div>
   <div class="row">
-    <div class="columns large-9">
+    <div class="column large-12">
       <%= t("desfake.footer.description") %>
     </div>
   </div>
   <div class="row">
-    <div class="columns large-3">
-      <nav class="main__footer__nav text-left">
+    <div class="column large-12">
+      <nav class="main__footer__nav">
         <ul class="footer-nav">
           <% organization_pages = current_organization.static_pages_accessible_for(current_user) %>
           <% if organization_pages.any? %>
@@ -31,6 +41,8 @@
     </div>
   </div>
   <div class="row">
-    <%= render partial: "layouts/decidim/social_media_links" %>
+    <div class="column large-12">
+      <%= render partial: "layouts/decidim/social_media_links" %>
+    </div>
   </div>
 </div>
