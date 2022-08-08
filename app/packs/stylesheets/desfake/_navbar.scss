@@ -93,8 +93,6 @@
 
     .input-group {
       margin-bottom: 0;
-      border: $input-border;
-      border-radius: 50%;
     }
 
     &:not(:focus-within) {
@@ -151,6 +149,7 @@
 
   &_user__login {
     a {
+      color: $white;
       border: $button-border;
       border-radius: $button-radius;
       text-transform: none;

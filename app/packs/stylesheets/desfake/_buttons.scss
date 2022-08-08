@@ -1,6 +1,13 @@
 @import "./variables";
 @import "./mixins";
 
+a.button {
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
 .button {
   background-color: $white;
   color: $primary-color;

@@ -2,6 +2,7 @@
 
 .footer {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .mini-footer,
@@ -10,11 +11,17 @@
 }
 
 .main-footer {
-  width: 75%;
+  width: 100%;
+  @include breakpoint(mediumlarge) {
+    width: 75%;
+  }
 }
 
 .mini-footer {
-  width: 25%;
+  width: 100%;
+  @include breakpoint(mediumlarge) {
+    width: 25%;
+  }
 
   .logos {
     display: flex;
@@ -37,7 +44,7 @@
 
     &:hover,
     &:focus {
-      color: $white;
+      color: $light-gray;
       text-decoration: underline;
     }
   }
@@ -59,7 +66,31 @@
   text-align: left;
 
   .footer-nav li {
-    padding: 0;
-    margin-right: 1em;
+    padding: 1em 0;
+
+    @include breakpoint(mediumlarge) {
+      padding: 0;
+      margin-right: 1em;
+    }
   }
+}
+
+.main__footer__social {
+  text-align: left;
+}
+
+.logo-desfake,
+.logo-verificat {
+  img {
+    max-height: 1em;
+    margin-bottom: 0.25em;
+  }
+
+  .external-link-indicator {
+    display: none;
+  }
+}
+
+.desfake-footer-description {
+  padding: 1em 0;
 }

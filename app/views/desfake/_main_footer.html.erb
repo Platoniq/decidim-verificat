@@ -1,13 +1,13 @@
 <div class="main-footer">
   <div class="row">
     <div class="column large-12">
-      <a rel="noopener"
+      <a class="logo-desfake" rel="noopener"
           href="https://desfake.cat"
           target="_blank">
         <%= image_pack_tag("media/images/desfake-logo.png", alt: t("desfake.footer.desfake_logo")) %>
       </a>
       <%= t("desfake.footer.project_by") %>
-      <a rel="noopener"
+      <a class="logo-verificat" rel="noopener"
           href="https://verificat.cat"
           target="_blank">
         <%= image_pack_tag("media/images/verificat-logo.png", alt: t("desfake.footer.verificat_logo")) %>
@@ -16,7 +16,9 @@
   </div>
   <div class="row">
     <div class="column large-12">
-      <%= t("desfake.footer.description") %>
+      <p class="desfake-footer-description">
+        <%= t("desfake.footer.description") %>
+      </p>
     </div>
   </div>
   <div class="row">
