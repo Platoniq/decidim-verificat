@@ -1,5 +1,12 @@
 @font-face {
   font-family: "Roboto Flex";
+  src: url("fonts/RobotoFlex-Regular.otf") format("opentype"), url("fonts/RobotoFlex-Regular.ttf") format("truetype"),
+    url("fonts/RobotoFlex-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto Flex";
   src: url("fonts/RobotoFlex-VariableFont.otf") format("opentype"),
     url("fonts/RobotoFlex-VariableFont.ttf") format("truetype"),
     url("fonts/RobotoFlex-VariableFont.woff") format("woff");

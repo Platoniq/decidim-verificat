@@ -1,15 +1,18 @@
 @import "./variables";
+@import "./mixins";
+
+a.button {
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
 
 .button {
   background-color: $white;
   color: $primary-color;
 
-  &:hover,
-  &:focus {
-    background: $desfake-gradient;
-    color: $white;
-    transition: background ease-in-out 200ms;
-  }
+  @include button-hover;
 }
 
 .button--sc {
@@ -19,20 +22,15 @@
 
 @each $name, $color in $color-palette {
   .button.#{$name} {
-    border-color: $color;
+    border-color: $primary-color;
 
-    &.hover,
-    &:hover {
-      background: $color;
-      color: $white;
-    }
+    @include button-hover;
   }
 
   .button.hollow.#{$name} {
-    &.hover,
-    &:hover {
-      background: $white;
-      color: $color;
-    }
+    border-color: $primary-color;
+    color: $primary-color;
+
+    @include button-hover;
   }
 }

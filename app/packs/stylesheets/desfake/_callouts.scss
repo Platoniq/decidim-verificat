@@ -5,7 +5,7 @@ $lightness: 90%;
 
 @each $name, $color in $color-palette {
   .callout.#{$name} {
-    border-left: none;
+    border-left: $color;
 
     background-color: hsl(hue($color), $saturation, $lightness);
   }

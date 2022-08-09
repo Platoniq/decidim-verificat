@@ -12,7 +12,8 @@ $color-desfake-orange-darker: #ff6b00;
 $desfake-gradient: linear-gradient(230.05deg, $color-desfake-orange 23.96%, $color-desfake-yellow 80.75%);
 
 $primary-color: $color-desfake-orange;
-$secondary-color: $color-desfake-yellow;
+$primary-color-darker: $color-desfake-orange;
+$secondary-color: $primary-color;
 $success-color: #00be54;
 $warning-color: $black;
 $alert-color: #ff0057;
@@ -34,14 +35,6 @@ $alert-color-rgb: extract-rgb($alert-color);
   --alert: #{$alert-color};
   --alert-rgb: #{$alert-color-rgb};
 }
-
-// This is a file that can be overridden by the application in order to override
-// some of the Foundation/Decidim SCSS settings and variables after the default
-// settings have been loaded.
-//
-// To override styles use decidim_application.scss
-//
-// By default this is empty.
 
 $global-font-size: 100%;
 $global-width: rem-calc(1200);
@@ -74,6 +67,7 @@ $foundation-palette: (
   cat11: #ff3300,
   cat12: #0adba9,
 );
+$light-gray: #d7d7d7;
 $medium-gray: #e6e6e6;
 $dark-gray: #959595;
 $white: #ffffff;
@@ -185,9 +179,9 @@ $button-padding: 0.85em 1em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-color: $primary-color;
-$button-color-alt: $primary-color;
+$button-color-alt: $white;
 $button-background: $white;
-$button-background-hover: $button-background;
+$button-background-hover: $desfake-gradient;
 $button-shadow-depth: 6px;
 $button-radius: 5px;
 $button-border: 1px solid $primary-color;
@@ -211,11 +205,59 @@ $button-responsive-expanded: false;
 $card-background: $white;
 $card-font-color: $body-font-color;
 $card-divider-background: $primary-color;
-$card-border: 1px solid $primary-color;
+$card-border: 1px solid $light-gray;
 $card-shadow: none;
 $card-border-radius: $global-radius;
 $card-padding: $global-padding;
 $card-margin-bottom: $global-margin;
+
+// // 20. Forms
+// // ---------
+
+/*
+ * Leaving these variables here commented out in case we need to
+ * use them in the future. They come from the Foundation library which
+ * is loaded by Decidim, so we can change Decidim defaults just by changing these
+ */
+
+// $fieldset-border: 1px solid $primary-color;
+// $fieldset-padding: rem-calc(20);
+// $fieldset-margin: rem-calc(18 0);
+// $legend-padding: rem-calc(0 3);
+// $form-spacing: rem-calc(16);
+// $helptext-color: $black;
+// $helptext-font-size: rem-calc(13);
+// $helptext-font-style: italic;
+// $input-prefix-color: $black;
+// $input-prefix-background: $light-gray;
+// $input-prefix-border: 1px solid $primary-color;
+// $input-prefix-padding: 1rem;
+// $form-label-color: $black;
+// $form-label-font-size: rem-calc(14);
+// $form-label-font-weight: $global-weight-normal;
+// $form-label-line-height: 1.8;
+$select-background: $white;
+$select-triangle-color: $primary-color-darker;
+$select-radius: $global-radius;
+$input-color: $black;
+$input-placeholder-color: $primary-color;
+// $input-font-family: inherit;
+// $input-font-size: rem-calc(16);
+// $input-font-weight: $global-weight-normal;
+// $input-line-height: $global-lineheight;
+// $input-background: $white;
+// $input-background-focus: $white;
+// $input-background-disabled: $light-gray;
+$input-border: 1px solid $primary-color;
+$input-border-focus: 2px solid $primary-color;
+// $input-padding: $form-spacing / 2;
+// $input-shadow: inset 0 1px 2px rgba($black, 0.1);
+// $input-shadow-focus: 0 0 5px $primary-color;
+// $input-cursor-disabled: not-allowed;
+$input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+// $input-number-spinners: true;
+$input-radius: $global-radius;
+// $form-button-radius: $global-radius;
 
 // 51. Tabs
 // --------

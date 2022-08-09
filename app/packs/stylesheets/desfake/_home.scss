@@ -1,19 +1,19 @@
 @import "./variables";
+@import "./mixins";
 
 .home-section:nth-of-type(2n + 1) {
   background: $desfake-gradient;
 
   .section-heading,
   .statistics-cell .statistic__title {
-    color: $body-font-color;
+    color: $white;
   }
 
   .button.hollow {
-    &:hover,
-    &:focus {
-      background: $white;
-      color: $primary-color;
-    }
+    background: $white;
+    color: $primary-color;
+
+    @include button-hover;
   }
 
   .home-bullet__icon svg {
@@ -27,15 +27,9 @@
   }
 
   .button.hollow {
-    color: $primary-color;
-    border-color: $primary-color;
-    background: $white;
-
-    &:hover,
-    &:focus {
-      background: $desfake-gradient;
-      color: $white;
-    }
+    border: none;
+    background: $medium-gray;
+    color: $body-font-color;
   }
 }
 
