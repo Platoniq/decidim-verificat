@@ -36,14 +36,6 @@ $alert-color-rgb: extract-rgb($alert-color);
   --alert-rgb: #{$alert-color-rgb};
 }
 
-// This is a file that can be overridden by the application in order to override
-// some of the Foundation/Decidim SCSS settings and variables after the default
-// settings have been loaded.
-//
-// To override styles use decidim_application.scss
-//
-// By default this is empty.
-
 $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 135%;
@@ -221,6 +213,12 @@ $card-margin-bottom: $global-margin;
 
 // // 20. Forms
 // // ---------
+
+/*
+ * Leaving these variables here commented out in case we need to
+ * use them in the future. They come from the Foundation library which
+ * is loaded by Decidim, so we can change Decidim defaults just by changing these
+ */
 
 // $fieldset-border: 1px solid $primary-color;
 // $fieldset-padding: rem-calc(20);
