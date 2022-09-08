@@ -1,9 +1,25 @@
 @import "./variables";
 
-.user-nickname .field label .small-1.large-1.columns {
-    background-color: $color-desfake-orange;
+form.register-form {
+    .card {
+        .user-nickname .field label .small-1.large-1.columns {
+            background-color: $color-desfake-orange;
+            border: 1px solid $color-desfake-orange;
+            border-radius: 10px 0px 0px 10px;
 
-    span {
-        margin: auto
+            span {
+                margin: auto;
+                color: $white;
+            }
+        }
+
+        span.help-text {
+            color: grey;
+            font-style: normal;
+        }
+    }
+
+    input {
+        border-radius: 10px;
     }
 }

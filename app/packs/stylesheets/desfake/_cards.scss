@@ -1,5 +1,9 @@
 @import "./variables";
 
+.card {
+  border-color: $color-desfake-orange !important;
+}
+
 .card__header .card__title {
   font-weight: $global-weight-bold;
 }

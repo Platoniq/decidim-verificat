@@ -37,6 +37,8 @@
     background: $button-background;
     border: $button-border;
     color: $button-color;
+
+    @include button-hover;
   }
 }
 
