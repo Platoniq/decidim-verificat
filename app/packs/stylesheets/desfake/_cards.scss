@@ -7,3 +7,13 @@
 .card__top {
   border-radius: $card-border-radius $card-border-radius 0 0;
 }
+
+.card__top, .card__footer {
+  background-color: $card-background;
+}
+
+.card-data__item {
+  strong {
+    color: $color-desfake-orange;
+  }
+}

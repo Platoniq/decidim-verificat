@@ -1,0 +1,9 @@
+@import "./variables";
+
+.user-nickname .field label .small-1.large-1.columns {
+    background-color: $color-desfake-orange;
+
+    span {
+        margin: auto
+    }
+}

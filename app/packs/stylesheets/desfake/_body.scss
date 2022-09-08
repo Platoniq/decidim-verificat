@@ -1,5 +1,11 @@
 @import "./variables";
 
+.page-title-wrapper {
+  .page-title {
+    color: $color-desfake-orange;
+  }
+}
+
 .off-canvas-wrapper {
   background-color: $body-background;
 }
