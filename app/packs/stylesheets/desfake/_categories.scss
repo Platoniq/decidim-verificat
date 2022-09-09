@@ -1,0 +1,19 @@
+@import "./variables";
+
+.accountability .categories .categories--group .card__link .category--line {
+    background-color: $color-desfake-orange;
+
+    strong {
+        color: $white;
+    }
+
+    .progress-figure, .category--count {
+        color: $white;
+    }
+
+    &:hover {
+        strong {
+            color: $black;
+        }
+    }
+}

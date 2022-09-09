@@ -1,9 +1,23 @@
 @import "./variables";
 
+.card {
+  border-color: $color-desfake-orange !important;
+}
+
 .card__header .card__title {
   font-weight: $global-weight-bold;
 }
 
 .card__top {
   border-radius: $card-border-radius $card-border-radius 0 0;
+}
+
+.card__top, .card__footer {
+  background-color: $card-background;
+}
+
+.card-data__item {
+  strong {
+    color: $color-desfake-orange;
+  }
 }

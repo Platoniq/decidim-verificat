@@ -50,8 +50,10 @@
       margin-top: 8px;
       display: inline-block;
       border: $button-border;
+      border-right: none;
       transition: none;
       height: 2.5rem; //matches input group button height
+      border-radius: $select-radius 0 0 $select-radius;
 
       &:focus {
         box-shadow: none;
@@ -75,6 +77,7 @@
         box-shadow: none;
         border: $button-border;
         border-left: none;
+        border-radius: 0 $global-radius $global-radius 0;
 
         &:hover {
           top: 0;

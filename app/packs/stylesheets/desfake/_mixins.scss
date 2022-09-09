@@ -5,7 +5,7 @@
   &:focus {
     background: $primary-color-darker;
     border-color: $primary-color-darker;
-    color: $body-font-color !important;
+    color: $white !important;
     transition: background color ease-in-out 200ms;
     text-decoration: underline; /* For accessiblity */
   }
