@@ -12,4 +12,6 @@ Rails.application.routes.draw do
 
   mount Decidim::Core::Engine => "/"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  resources :itineraries, only: [:index, :show], module: "desfake"
 end
