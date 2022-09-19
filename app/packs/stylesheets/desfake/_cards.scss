@@ -21,3 +21,19 @@
     color: $color-desfake-orange;
   }
 }
+
+#itineraries-processes-grid {
+  .card {
+    .card__icondata,
+    .card__status {
+      display: none;
+    }
+    .card__footer--spaces {
+      .card__support {
+        .card__button {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
