@@ -7,6 +7,12 @@ require "rails_helper"
 # file should be updated to match any change/bug fix introduced in the core
 checksums = [
   {
+    package: "decidim-participatory_processes",
+    files: {
+      "/app/models/decidim/participatory_process.rb" => "a20f46b5f0fa44c5f033d5a3152efa92"
+    }
+  },
+  {
     package: "decidim-access_codes",
     files: {
       "/app/controllers/decidim/access_codes/verification/authorizations_controller.rb" => "b9284d731ff0ed3c729c9746120b5373"
