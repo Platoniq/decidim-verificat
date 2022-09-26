@@ -33,15 +33,7 @@ module Decidim
 
           private_participatory_spaces.each do |private_participatory_space|
             form = Decidim::Admin::ParticipatorySpacePrivateUserForm.from_params(user_params, privatable_to: private_participatory_space)
-            Decidim::Admin::CreateParticipatorySpacePrivateUser.call(form, current_user, private_participatory_space) do
-              on(:ok) do
-                add_flash_notice_message(I18n.t("participatory_space_private_users.create.success", scope: "decidim.admin"))
-              end
-
-              on(:invalid) do
-                flash.now[:alert] = I18n.t("participatory_space_private_users.create.error", scope: "decidim.admin")
-              end
-            end
+            Decidim::Admin::CreateParticipatorySpacePrivateUser.call(form, current_user, private_participatory_space)
           end
         end
 
@@ -50,14 +42,6 @@ module Decidim
             name: current_user.name,
             email: current_user.email
           }
-        end
-
-        def add_flash_notice_message(text)
-          flash_notice_messages << text
-        end
-
-        def flash_notice_messages
-          @flash_notice_messages || []
         end
       end
     end
