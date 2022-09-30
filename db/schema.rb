@@ -1596,7 +1596,7 @@ ActiveRecord::Schema.define(version: 2022_09_30_100230) do
     t.jsonb "body", default: {}, null: false
     t.boolean "published", default: false, null: false
     t.integer "position", default: 1, null: false
-    t.string "subscription", default: "premium", null: false
+    t.integer "subscription", default: 0, null: false
     t.index ["decidim_organization_id"], name: "index_desfake_itineraries_on_decidim_organization_id"
   end
 

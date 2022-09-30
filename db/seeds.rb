@@ -22,7 +22,7 @@ organization = Decidim::Organization.first
     body: Decidim::Faker::Localized.wrapped("<p>", "</p>") do
       Decidim::Faker::Localized.paragraph(sentence_count: 5)
     end,
-    subscription: x.zero? ? "free" : "premium",
+    subscription: x.zero? ? :free : :premium,
     organization: organization,
     participatory_processes: [Decidim::ParticipatoryProcess.where(organization: organization).all.sample],
     hero_image: ActiveStorage::Blob.create_and_upload!(
