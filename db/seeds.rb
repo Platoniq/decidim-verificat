@@ -15,7 +15,7 @@ require "decidim/faker/localized"
 organization = Decidim::Organization.first
 
 4.times do |x|
-  itinerary = Desfake::Itinerary.create!(
+  Desfake::Itinerary.create!(
     title: Decidim::Faker::Localized.sentence(word_count: 5),
     subtitle: Decidim::Faker::Localized.sentence(word_count: 10),
     description: Decidim::Faker::Localized.paragraph(sentence_count: 1),
