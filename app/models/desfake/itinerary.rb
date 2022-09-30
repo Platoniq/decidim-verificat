@@ -8,7 +8,7 @@ module Desfake
     include Decidim::HasUploadValidations
     include Decidim::TranslatableResource
 
-    translatable_fields :title, :subtitle, :description
+    translatable_fields :title, :subtitle, :description, :body
 
     belongs_to :organization,
                foreign_key: "decidim_organization_id",
@@ -22,5 +22,9 @@ module Desfake
 
     has_one_attached :hero_image
     validates_upload :hero_image, uploader: Decidim::HeroImageUploader
+
+    default_scope { order(position: :asc) }
+
+    enum subscription: { premium: 0, free: 1 }
   end
 end
