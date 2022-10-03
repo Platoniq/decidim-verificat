@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_14_132336) do
+ActiveRecord::Schema.define(version: 2022_09_30_100230) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -1593,6 +1593,10 @@ ActiveRecord::Schema.define(version: 2022_09_14_132336) do
     t.bigint "decidim_organization_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.jsonb "body", default: {}, null: false
+    t.boolean "published", default: false, null: false
+    t.integer "position", default: 1, null: false
+    t.integer "subscription", default: 0, null: false
     t.index ["decidim_organization_id"], name: "index_desfake_itineraries_on_decidim_organization_id"
   end
 

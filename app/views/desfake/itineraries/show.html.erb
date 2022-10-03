@@ -7,8 +7,8 @@
       <h3 class="heading3">
         <%= translated_attribute @itinerary.subtitle %>
       </h3>
-      <div>
-        <%= translated_attribute @itinerary.description %>
+      <div class="section">
+        <%= decidim_sanitize_editor translated_attribute(@itinerary.body) %>
       </div>
     </section>
     <section class="section" id="itineraries-processes-grid">
