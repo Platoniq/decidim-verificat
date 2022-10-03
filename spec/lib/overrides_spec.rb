@@ -11,20 +11,27 @@ checksums = [
     files: {
       "/app/models/decidim/participatory_process.rb" => "a20f46b5f0fa44c5f033d5a3152efa92"
     }
+  },
+  {
+    package: "decidim-access_codes",
+    files: {
+    "/app/controllers/decidim/access_codes/verification/authorizations_controller.rb" => "b9284d731ff0ed3c729c9746120b5373"
+    }
   }
 ]
 
 describe "Overriden files", type: :view do
+  # rubocop:disable Rails/DynamicFindBy
   checksums.each do |item|
-    # rubocop:disable Rails/DynamicFindBy
     spec = ::Gem::Specification.find_by_name(item[:package])
-    # rubocop:enable Rails/DynamicFindBy
+
     item[:files].each do |file, signature|
       it "#{spec.gem_dir}#{file} matches checksum" do
         expect(md5("#{spec.gem_dir}#{file}")).to eq(signature)
       end
     end
   end
+  # rubocop:enable Rails/DynamicFindBy
 
   private
 
