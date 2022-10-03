@@ -3,7 +3,7 @@
 module Desfake
   class ItinerariesController < Decidim::ApplicationController
     def index
-      @itineraries = Desfake::Itinerary.all
+      @itineraries = Desfake::Itinerary.published
     end
 
     def show

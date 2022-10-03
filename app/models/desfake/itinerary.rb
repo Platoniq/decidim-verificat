@@ -27,6 +27,8 @@ module Desfake
 
     default_scope { order(position: :asc) }
 
+    scope :published, -> { where(published: true) }
+
     enum subscription: { premium: 0, free: 1 }
   end
 end
