@@ -15,7 +15,7 @@ checksums = [
   {
     package: "decidim-access_codes",
     files: {
-    "/app/controllers/decidim/access_codes/verification/authorizations_controller.rb" => "b9284d731ff0ed3c729c9746120b5373"
+      "/app/controllers/decidim/access_codes/verification/authorizations_controller.rb" => "b9284d731ff0ed3c729c9746120b5373"
     }
   }
 ]
