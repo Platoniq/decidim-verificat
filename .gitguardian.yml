@@ -1,0 +1,3 @@
+# Exclude files and paths by globbing
+paths-ignore:
+  - 'spec/lib/overrides_spec.rb'
