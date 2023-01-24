@@ -8,6 +8,16 @@ GIT
       decidim-verifications (~> 0.26.0)
 
 GIT
+  remote: https://github.com/decidim-ice/decidim-module-decidim_awesome
+  revision: e1e48fc6b4aaca1af2f04897a63a3f664f2340fc
+  branch: main
+  specs:
+    decidim-decidim_awesome (0.9.0)
+      decidim-admin (>= 0.26.0, < 0.28)
+      decidim-core (>= 0.26.0, < 0.28)
+      sassc (~> 2.3)
+
+GIT
   remote: https://github.com/mainio/decidim-module-term_customizer
   revision: 6b5e50d9ae4cf16897cf193da4a55cd07d3fce81
   branch: develop
@@ -289,10 +299,6 @@ GEM
     decidim-debates (0.26.2)
       decidim-comments (= 0.26.2)
       decidim-core (= 0.26.2)
-    decidim-decidim_awesome (0.8.2)
-      decidim-admin (>= 0.25.0, < 0.27)
-      decidim-core (>= 0.25.0, < 0.27)
-      sassc (~> 2.3)
     decidim-dev (0.26.2)
       axe-core-rspec (~> 4.1.0)
       byebug (~> 11.0)
@@ -828,7 +834,7 @@ DEPENDENCIES
   capistrano-sidekiq
   decidim (= 0.26.2)
   decidim-access_codes!
-  decidim-decidim_awesome
+  decidim-decidim_awesome!
   decidim-dev (= 0.26.2)
   decidim-term_customizer!
   faker (~> 2.14)
