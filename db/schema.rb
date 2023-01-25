@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_10_112648) do
+ActiveRecord::Schema.define(version: 2022_09_30_100230) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -1036,6 +1036,11 @@ ActiveRecord::Schema.define(version: 2022_05_10_112648) do
     t.index ["decidim_component_id"], name: "index_decidim_pages_pages_on_decidim_component_id"
   end
 
+  create_table "decidim_participatory_process_desfake_itineraries", id: false, force: :cascade do |t|
+    t.bigint "decidim_participatory_process_id", null: false
+    t.bigint "desfake_itinerary_id", null: false
+  end
+
   create_table "decidim_participatory_process_groups", id: :serial, force: :cascade do |t|
     t.jsonb "title", null: false
     t.jsonb "description", null: false
@@ -1581,6 +1586,20 @@ ActiveRecord::Schema.define(version: 2022_05_10_112648) do
     t.index ["decidim_organization_id"], name: "index_verifications_csv_census_to_organization"
   end
 
+  create_table "desfake_itineraries", force: :cascade do |t|
+    t.jsonb "title", null: false
+    t.jsonb "subtitle", null: false
+    t.jsonb "description", null: false
+    t.bigint "decidim_organization_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.jsonb "body", default: {}, null: false
+    t.boolean "published", default: false, null: false
+    t.integer "position", default: 1, null: false
+    t.integer "subscription", default: 0, null: false
+    t.index ["decidim_organization_id"], name: "index_desfake_itineraries_on_decidim_organization_id"
+  end
+
   create_table "oauth_access_grants", force: :cascade do |t|
     t.integer "resource_owner_id", null: false
     t.bigint "application_id", null: false
@@ -1682,6 +1701,7 @@ ActiveRecord::Schema.define(version: 2022_05_10_112648) do
   add_foreign_key "decidim_verifications_conflicts", "decidim_users", column: "current_user_id"
   add_foreign_key "decidim_verifications_conflicts", "decidim_users", column: "managed_user_id"
   add_foreign_key "decidim_verifications_csv_data", "decidim_organizations"
+  add_foreign_key "desfake_itineraries", "decidim_organizations"
   add_foreign_key "oauth_access_grants", "decidim_users", column: "resource_owner_id"
   add_foreign_key "oauth_access_grants", "oauth_applications", column: "application_id"
   add_foreign_key "oauth_access_tokens", "decidim_users", column: "resource_owner_id"
